@@ -5,10 +5,10 @@
 groups = ["default"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:dfa7a6c4680b8a5c9350d12f7f18ef5d66facc4b70ae91c4c8a52a569147b3d5"
+content_hash = "sha256:f2f7bf748de3e34746fb0d7777b05cb7446bde56d690592d08c40294600bc9e7"
 
 [[metadata.targets]]
-requires_python = ">=3.12"
+requires_python = ">=3.11"
 
 [[package]]
 name = "hid"

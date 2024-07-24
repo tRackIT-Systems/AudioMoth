@@ -94,8 +94,10 @@ def get_config(serial_number: str | None = None) -> AudioMothConfig:
         read_data: bytes = device.read(18)
         unpacked_data: tuple[Any] = struct.unpack("<BLBBBBLBHH", read_data)
         if unpacked_data[0] != HID_READ_MESSAGE[0]:
+            serial_number = audio_moth["serial_number"]
+
             raise RuntimeError(
-                f"Could not read configuration from device [{audio_moth["serial_number"]=}, [{unpacked_data[0]=}, {HID_READ_MESSAGE=}]"
+                f"Could not read configuration from device [{serial_number=}, [{unpacked_data[0]=}, {HID_READ_MESSAGE=}]"
             )
 
         return AudioMothConfig(
