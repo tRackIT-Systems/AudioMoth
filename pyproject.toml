@@ -1,0 +1,21 @@
+[project]
+name = "audiomoth"
+version = "2024.07.01"
+description = "Configuration tool for audiomoth USB microphones"
+authors = [
+    {name = "Artur Sterz", email = "sterz@trackit.systems"},
+]
+dependencies = [
+    "hid>=1.0.6",
+]
+requires-python = ">=3.12"
+readme = "README.md"
+license = {text = "GPLv3"}
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.pdm]
+distribution = true
