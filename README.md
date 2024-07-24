@@ -1,6 +1,6 @@
-# AudioMoth
+# AudioMoth Configurator
 
-Simple tool to configure your AudioMoth
+Simple tool to configure your AudioMoth USB Microphone. The tool implements functionality of [OpenAcousticDevice's AudioMoth-USB-Microphone-Cmd](https://github.com/OpenAcousticDevices/AudioMoth-USB-Microphone-Cmd) tool, is written in python and can also be used as a python module.
 
 ## Installation
 ### Requirements
@@ -14,11 +14,11 @@ If `hidapi` is installed, install `AudioMoth` using you favorite Python package 
 However, `AudioMoth` is not published, so you have to use the URL, i.e.:
 
 ```sh
-#pip
+# pip
 pip install "git+https://github.com/trackit-systems/audiomoth"
-#rye
+# rye
 rye add audiomoth --git https://github.com/trackit-systems/audiomoth
-#pdm
+# pdm
 pdm add "git+https://github.com/trackit-systems/audiomoth"
 ```
 
