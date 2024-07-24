@@ -19,3 +19,6 @@ build-backend = "setuptools.build_meta"
 
 [tool.pdm]
 distribution = true
+
+[project.scripts]
+audiomoth = "audiomoth.audiomoth:main"

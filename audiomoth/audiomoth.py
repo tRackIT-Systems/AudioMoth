@@ -5,7 +5,8 @@ from dataclasses import dataclass
 from typing import Any, Callable
 
 import hid
-from utils import (
+
+from audiomoth.utils import (
     HID_CONFIGURATION_MESSAGE,
     HID_PERSIST_MESSAGE,
     HID_READ_MESSAGE,
@@ -208,7 +209,7 @@ def persist_config(serial_number: str | None = None) -> None:
         device.write(HID_PERSIST_MESSAGE)
 
 
-if __name__ == "__main__":
+def main():
     args: argparse.Namespace = _parse_args()
 
     cmds: dict[str, Callable] = {
@@ -246,3 +247,7 @@ if __name__ == "__main__":
         func(serial_number=args.serial_number)
     elif args.command in ["moths", "get"]:
         logger.info(func(serial_number=args.serial_number))
+
+
+if __name__ == "__main__":
+    main()
